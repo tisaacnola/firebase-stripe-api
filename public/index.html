@@ -4,8 +4,179 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Montagu Slab", sans-serif;
+        min-height: 100vh;
+        background: #0f172a;
+        color: white;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
   </head>
   <body>
-    hey
+    <div class="container">
+      <div class="headerContainer">
+        <h1>Money Maker</h1>
+        <a href="#" class="first">
+          <i class="fa-solid fa-book"></i>
+          Docs
+        </a>
+      </div>
+      <section>
+        <h2 class="subHeader">Description</h2>
+        <div class="info">
+          <h3>Purpose</h3>
+          <p>To provide Black History Facts</p>
+        </div>
+        <div class="info">
+          <h3>Author</h3>
+          <p>Tre Isaac</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="subHeader">Check Key Status</h2>
+        <p class="preMsg">Check status of API key below</p>
+        <p class="errorMsg">Please ensure API is correctly formatted</p>
+        <p class="authenticatedMsg">API Key Authorized</p>
+        <div class="info">
+          <h3>Example API Key</h3>
+          <p>AIzaSyCwEro-wQ6YUNcA1ozA9FQev-DyJp3t2EQ</p>
+        </div>
+        <div class="keyInput">
+          <input type="text" placeholder="API Key" />
+          <i class="fa-regular fa-circle codeCheck"></i>
+          <i class="fa-solid fa-circle codeCheck"></i>
+        </div>
+        <div class="addKey">
+          <i class="fa-solid fa-check"></i>
+          Check Status
+        </div>
+      </section>
+      <section>
+        <h2 class="subHeader">Billing Plans</h2>
+        <div class="planContainer">
+          <div class="subscription">
+            <div class="subscriptionHeader">
+              <div>
+                <h3 class="currentPlan">PrePaid</h3>
+                <h3>Plan</h3>
+              </div>
+              <div class="activePlan">
+                <i class="fa-regular fa-circle-check"></i>
+                <p>Active</p>
+              </div>
+            </div>
+            <div class="subscriptionDetails">
+              <div class="detailBlock">
+                <h4>Plan Details</h4>
+                <p>
+                  <i class="fa-solid fa-check"></i>
+                  200 Fast API calls
+                </p>
+                <p>
+                  <i class="fa-solid fa-check"></i>
+                  Pay in Advance
+                </p>
+                <p>
+                  <i class="fa-solid fa-check"></i>
+                  Motivation 101
+                </p>
+              </div>
+              <div class="detailBlock">
+                <h4>Billing + Payment</h4>
+                <div class="billingBlock">
+                  <p>Price</p>
+                  <p>$20</p>
+                </div>
+                <h4>Billing + Payment</h4>
+                <div class="billingBlock">
+                  <p>Billing Period</p>
+                  <p>N/A</p>
+                </div>
+                <h4>Billing + Payment</h4>
+                <div class="billingBlock">
+                  <p>Renewal Date</p>
+                  <p>N/A</p>
+                </div>
+              </div>
+            </div>
+            <div class="updateBtn">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Checkout
+            </div>
+          </div>
+          <div class="subscription">
+            <div class="subscriptionHeader">
+              <div>
+                <h3 class="currentPlan">Subscription</h3>
+                <h3>Plan</h3>
+              </div>
+              <div class="activePlan2">
+                <i class="fa-regular fa-circle-check"></i>
+                <p>Active</p>
+              </div>
+            </div>
+            <div class="subscriptionDetails">
+              <div class="detailBlock">
+                <h4>Plan Details</h4>
+                <p>
+                  <i class="fa-solid fa-check"></i>
+                  Pay Per Response Generation
+                </p>
+                <p>
+                  <i class="fa-solid fa-check"></i>
+                  Unlimited API calls
+                </p>
+                <p>
+                  <i class="fa-solid fa-check"></i>
+                  Motivation 201
+                </p>
+              </div>
+              <div class="detailBlock">
+                <h4>Billing + Payment</h4>
+                <div class="billingBlock">
+                  <p>Price</p>
+                  <p>&1.00/call</p>
+                </div>
+                <h4>Billing + Payment</h4>
+                <div class="billingBlock">
+                  <p>Billing Period</p>
+                  <p>Monthly</p>
+                </div>
+                <h4>Billing + Payment</h4>
+                <div class="billingBlock">
+                  <p>Renewal Date</p>
+                  <p>12/2/2023</p>
+                </div>
+              </div>
+            </div>
+            <div class="updateBtn">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Checkout
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
