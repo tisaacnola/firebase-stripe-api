@@ -3,11 +3,291 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Montagu Slab", sans-serif;
   min-height: 100vh;
-  background: #0d46cd;
+  background: linear-gradient(to right, black, rgb(71, 2, 71));
   color: white;
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerContainer a,
+.updateBtn,
+.addKey {
+  color: white;
+  text-decoration: none;
+  background: hsla(120, 80%, 50%, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.updateBtn,
+.addKey {
+  width: fit-content;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.headerContainer a:hover,
+.updateBtn:hover,
+.addKey:hover {
+  background: hsla(140, 80%, 50%, 0.8);
+}
+
+.first {
+  display: flex;
+}
+
+.subHeader {
+  font-size: 1.3rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.info h3,
+.info p {
+  font-size: 0.9rem;
+}
+
+.info h3 {
+  color: chartreuse;
+  font-weight: 500;
+}
+
+.info p {
+  font-weight: 300;
+}
+
+.info i {
+  cursor: pointer;
+}
+
+.info i:hover {
+  opacity: 0.7;
+}
+
+.info .trashCan:hover {
+  color: coral;
+  opacity: unset;
+}
+
+.errorMsg {
+  color: red;
+}
+
+.authenticatedMsg {
+  color: blue;
+}
+
+.codeCheck {
+  padding: 0 8px;
+}
+
+.keyInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid forestgreen;
+}
+
+.keyInput:focus-within {
+  border-color: rgb(15, 221, 15);
+}
+
+.keyInput input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 12px;
+  color: white;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.planContainer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: hsla(120, 80%, 50%, 0.2);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.subscriptionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subscriptionHeader div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.subscriptionHeader h3 {
+  font-size: 1rem;
+}
+
+.activePlan,
+.activePlan2 {
+  border-radius: 20px;
+  background: limegreen;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.activePlan2 {
+  background: red;
+}
+
+.activePlan p,
+.activePlan2 p,
+.activePlan i,
+.activePlan2 i {
+  font-size: 0.8rem;
+}
+
+.activePlan p,
+.activePlan i {
+  text-shadow: 0 0 10px darkolivegreen;
+}
+
+.activePlan2 p,
+.activePlan2 i {
+  text-shadow: 0 0 10px rgb(120, 185, 6);
+}
+
+.currentPlan {
+  color: green;
+}
+
+.currentPlan2 {
+  color: red;
+}
+
+.subscriptionDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.detailBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailBlock h4 {
+  font-size: 0.8rem;
+  font-size: 800;
+}
+
+.detailBlock p {
+  font-size: 0.8rem;
+}
+
+.detailBlock i {
+  color: greenyellow;
+  background: black;
+  padding: 2px 4px;
+}
+
+.billingBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+@media (min-width: 700px) {
+  .container {
+    gap: 32px;
+  }
+
+  .headerContainer a {
+    font-size: 1rem;
+  }
+
+  .subHeader {
+    font-size: 1.8rem;
+  }
+
+  .info {
+    gap: 10px;
+  }
+
+  .info h3,
+  .info p {
+    font-size: 1rem;
+  }
+
+  .subscription {
+    padding: 24px;
+  }
+
+  .subscriptionHeader h3 {
+    font-size: 1rem;
+  }
+
+  .detailBlock h4 {
+    font-size: 1rem;
+  }
+
+  .detailBlock p {
+    font-size: 0.9rem;
+  }
+
+  .codeCheck {
+    padding: 0 10px;
+  }
+
+  .planContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
