@@ -245,6 +245,10 @@ section {
   color: white;
 }
 
+form button {
+  all: unset;
+}
+
 @media (min-width: 700px) {
   .container {
     gap: 32px;
