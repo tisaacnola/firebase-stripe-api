@@ -5,18 +5,18 @@ const port = 1337;
 require("dotenv").config();
 
 //Variables
-const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
+const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET;
 const stripe = require("stripe")(STRIPE_SECRET_KEY);
 const DOMAIN = "http://localhost:1337";
 //middleware
 app.use(express.static("public"));
 
 //routes
-app.post("/create-checkout-section/:product", async (req, res) => {
+app.post("/create-checkout-session/:product", async (req, res) => {
   const { product } = req.params;
   let mode, price_ID, line_items;
 
-  if ((product = "sub")) {
+  if (product === "sub") {
     price_ID = "price_1QHS0aDK9ZIEJoNto07emEHs";
     mode = "subscription";
     line_items = [
@@ -24,9 +24,9 @@ app.post("/create-checkout-section/:product", async (req, res) => {
         price: price_ID,
       },
     ];
-  } else if ((product = "pre")) {
+  } else if (product === "pre") {
     price_ID = "price_1QHRqzDK9ZIEJoNtjpd0OZ1x";
-    mode = "prepaid";
+    mode = "payment";
     line_items = [
       {
         price: price_ID,

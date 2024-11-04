@@ -61,7 +61,11 @@
       <section>
         <h2 class="subHeader">Billing Plans</h2>
         <div class="planContainer">
-          <div class="subscription">
+          <form
+            action="create-checkout-session/pre"
+            method="POST"
+            class="subscription"
+          >
             <div class="subscriptionHeader">
               <div>
                 <h3 class="currentPlan">PrePaid</h3>
@@ -106,12 +110,16 @@
                 </div>
               </div>
             </div>
-            <div class="updateBtn">
+            <button class="updateBtn">
               <i class="fa-solid fa-cart-shopping"></i>
               Checkout
-            </div>
-          </div>
-          <div class="subscription">
+            </button>
+          </form>
+          <form
+            action="/create-checkout-session/sub"
+            method="POST"
+            class="subscription"
+          >
             <div class="subscriptionHeader">
               <div>
                 <h3 class="currentPlan2">Subscription</h3>
@@ -156,11 +164,11 @@
                 </div>
               </div>
             </div>
-            <div class="updateBtn">
+            <button class="updateBtn">
               <i class="fa-solid fa-cart-shopping"></i>
               Checkout
-            </div>
-          </div>
+            </button>
+          </form>
         </div>
       </section>
     </div>
